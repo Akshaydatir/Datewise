@@ -1,9 +1,9 @@
 from twilio.rest import Client
 import datetime
 # Twilio credentials
-TWILIO_ACCOUNT_SID = 'AC19e960acf50b8e2670798c71c5ab595c'
-TWILIO_AUTH_TOKEN = '940321ab39c30f334f8c95b68117c926'
-YOUR_PHONE_NUMBER = '+918605320413'  # Your phone number where you want to receive notifications
+TWILIO_ACCOUNT_SID = '****ID****'
+TWILIO_AUTH_TOKEN = '****Auth_Token****'
+YOUR_PHONE_NUMBER = '****Phone Number****'  # Your phone number where you want to receive notifications
 
 # Dictionary to store dates and messages
 important_dates = {
@@ -20,7 +20,7 @@ def send_sms(message):
         message = client.messages.create(
             body=message,
             from_='+16364868046',  # Your Twilio phone number
-            to='+918605320413'  # Your phone number
+            to='*****'  # Your phone number
         )
         print(f"Message sent: {message.sid}")
     except Exception as e:
